@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 setlocal
 
 REM Переходим в папку, где лежит этот bat-файл
@@ -23,7 +24,7 @@ IF ERRORLEVEL 1 (
 )
 
 echo Открываю веб-интерфейс на http://localhost:8501 ...
-".venv\Scripts\python.exe" -m streamlit run app.py
+".venv\Scripts\python.exe" agent.py
 
 pause
 endlocal
