@@ -60,7 +60,7 @@ python --version   # должно быть Python 3.11.x
 Из папки `C:\proj\` выполни:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 > При первом анализе PDF MinerU автоматически скачивает модели (~5 ГБ).
@@ -97,7 +97,7 @@ python -m streamlit run agent.py
 |---|---|
 | `OSError: No such file or directory` при `pip install` | Перемести проект в `C:\proj\` (короткий путь) и повтори установку |
 | `streamlit` не найден после установки | Используй `python -m streamlit run agent.py` |
-| Установка упала на середине | Повтори `pip install -r requirements.txt` — pip продолжит с того места |
+| Установка упала на середине | Повтори `python -m pip install -r requirements.txt` |
 | MinerU скачивает модели очень долго | Нормально при первом запуске (~5 ГБ), дождись |
 | Ollama не отвечает | Убедись что Ollama установлена и запущена (`ollama serve`) |
 | Python 3.12 / 3.13 — ошибки при установке MinerU | Используй строго Python 3.10 или 3.11 |
